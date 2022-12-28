@@ -5,7 +5,6 @@ import java.util.LinkedHashSet;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.io.FileReader;
 
@@ -65,13 +64,13 @@ public class App {
             LocalDate date;
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
             do {
-                if (starterString == "curso:") {
+                if (starterString.equals("curso:")) {
                     title = reader.readLine();
                     description = reader.readLine();
                     workload = Integer.parseInt(reader.readLine());
 
                     cont = new Course(title, description, workload);
-                } else if (starterString == "mentoria:") {
+                } else if (starterString.equals("mentoria:")) {
                     title = reader.readLine();
                     description = reader.readLine();
                     date = LocalDate.parse(reader.readLine(), formatter);
@@ -95,7 +94,6 @@ public class App {
 
             bootcamp = new Bootcamp(name, description);
             bootcamp.setContents(contents);
-            bootcamp.setSubscribedDevs(devs);
         }
 
     }

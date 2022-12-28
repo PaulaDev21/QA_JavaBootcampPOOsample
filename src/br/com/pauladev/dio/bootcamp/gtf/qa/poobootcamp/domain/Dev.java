@@ -15,7 +15,7 @@ public class Dev {
 
     public void subscribeToBootcamp(Bootcamp bc) {
         this.getSubscribedContents().addAll(bc.getContents());
-        bc.getSubscribedDevs().add(this);
+        bc.subscribeDev(this);
     }
 
     public void progress() {
@@ -55,6 +55,11 @@ public class Dev {
 
     public void setSubscribedContents(Set<Content> subscribedContents) {
         this.subscribedContents = subscribedContents;
+    }
+
+    @Override
+    public String toString() {
+        return this.getName();
     }
 
 }

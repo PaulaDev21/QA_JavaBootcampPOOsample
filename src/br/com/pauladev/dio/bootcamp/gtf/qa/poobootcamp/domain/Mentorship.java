@@ -27,7 +27,7 @@ public class Mentorship extends Content {
 
     @Override
     public String toString() {
-        return "Mentorship [title=" + getTitle() + ", description=" + getDescription() + ", date=" + date + "]";
+        return "Mentorship: " + getTitle() + "\n - description: " + getDescription() + "\n - date: " + date + "\n";
     }
 
 }

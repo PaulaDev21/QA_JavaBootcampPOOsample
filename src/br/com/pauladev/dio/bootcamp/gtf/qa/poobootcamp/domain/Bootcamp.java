@@ -42,8 +42,8 @@ public class Bootcamp {
         return subscribedDevs;
     }
 
-    public void setSubscribedDevs(Set<Dev> subscribedDevs) {
-        this.subscribedDevs = subscribedDevs;
+    public void subscribeDev(Dev dev) {
+        this.getSubscribedDevs().add(dev);
     }
 
     public Set<Content> getContents() {
@@ -64,6 +64,13 @@ public class Bootcamp {
 
     public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
+    }
+
+    @Override
+    public String toString() {
+        return "\nBootcamp: " + name + "\n\nDescription: \n" + description + "\n \n - startDate: " + startDate
+                + "\n - endDate: "
+                + endDate + "\n\n" + subscribedDevs.size() + " " + "Subscribed Devs: \n" + subscribedDevs + "\n";
     }
 
     @Override
