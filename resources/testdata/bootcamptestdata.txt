@@ -3,6 +3,11 @@ Alberto Silva
 Luana Souza
 Ricardo A. Braga
 Célia Maria da Conceição e Lima
+João de Medeiros
+Joana Angélica Ramos
+Reinaldo Vasconcelos d'Ávila
+Adriana Renata Lyma
+Odilon Ramos
 
 curso:
 Fundamentos de Qualidade e Desenvolvimento de Software

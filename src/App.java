@@ -35,6 +35,14 @@ public class App {
 
             System.out.println(bootcamp);
 
+            for (int i = 0; i < 10; i++) {
+                for (Dev subscribed : bootcamp.getSubscribedDevs()) {
+                    if (randomGenerator.nextInt() % 2 == 0) {
+                        subscribed.progress();
+                        System.out.println(subscribed + " progressed in Bootcamp " + bootcamp.getName());
+                    }
+                }
+            }
         }
 
     }

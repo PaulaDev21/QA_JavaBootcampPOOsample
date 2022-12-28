@@ -24,8 +24,6 @@ public class Dev {
         if (firstContent.isPresent()) {
             this.concludedContents.add(firstContent.get());
             this.subscribedContents.remove(firstContent.get());
-        } else {
-            System.out.println("You're not subscribed to any content!");
         }
     }
 
