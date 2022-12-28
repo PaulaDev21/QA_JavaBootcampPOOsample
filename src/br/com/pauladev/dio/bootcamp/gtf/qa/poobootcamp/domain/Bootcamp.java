@@ -4,9 +4,14 @@ import java.util.Set;
 import java.util.LinkedHashSet;
 import java.util.HashSet;
 
+import java.time.LocalDate;
+
 public class Bootcamp {
+    private static final long DURATION_DEFAULT = 45L;
     private String name;
     private String description;
+    private final LocalDate startDate = LocalDate.now();
+    private LocalDate endDate = LocalDate.now().plusDays(DURATION_DEFAULT);
 
     private Set<Dev> subscribedDevs = new LinkedHashSet<>();
     private Set<Content> contents = new HashSet<>();
@@ -41,6 +46,18 @@ public class Bootcamp {
 
     public void setContents(Set<Content> contents) {
         this.contents = contents;
+    }
+
+    public LocalDate getStartDate() {
+        return startDate;
+    }
+
+    public LocalDate getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
     }
 
     @Override
