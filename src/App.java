@@ -24,24 +24,31 @@ public class App {
         readTestData("./resources/testdata/bootcamptestdata.txt");
 
         Random randomGenerator = new Random();
+        testSubscriptions(bootcamp, randomGenerator);
+        System.out.println(bootcamp);
 
+        testProgression(bootcamp, randomGenerator);
+    }
+
+    private static void testProgression(Bootcamp bootcamp, Random randomGenerator) {
+        for (int i = 0; i < 10; i++) {
+            for (Dev subscribed : bootcamp.getSubscribedDevs()) {
+                if (randomGenerator.nextInt() % 2 == 0) {
+                    subscribed.progress();
+                    System.out.println(subscribed + " progressed in Bootcamp " + bootcamp.getName() + "\n["
+                            + subscribed.computeTotalXp() + " experience points.]");
+                }
+            }
+        }
+    }
+
+    private static void testSubscriptions(Bootcamp bootcamp, Random randomGenerator) {
         for (Dev dev : devs) {
             if (randomGenerator.nextInt() % 2 == 0) {
                 dev.subscribeToBootcamp(bootcamp);
                 System.out.println(dev + " subscribed to Bootcamp " + bootcamp.getName());
             } else {
                 System.out.println(dev + " NOT subscribed to Bootcamp " + bootcamp.getName());
-            }
-
-            System.out.println(bootcamp);
-
-            for (int i = 0; i < 10; i++) {
-                for (Dev subscribed : bootcamp.getSubscribedDevs()) {
-                    if (randomGenerator.nextInt() % 2 == 0) {
-                        subscribed.progress();
-                        System.out.println(subscribed + " progressed in Bootcamp " + bootcamp.getName());
-                    }
-                }
             }
         }
 
