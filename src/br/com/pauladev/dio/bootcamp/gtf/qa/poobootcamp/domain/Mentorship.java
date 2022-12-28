@@ -2,25 +2,14 @@ package br.com.pauladev.dio.bootcamp.gtf.qa.poobootcamp.domain;
 
 import java.time.LocalDate;
 
-public class Mentorship {
-    private String title;
-    private String description;
+public class Mentorship extends Content {
+    private static final double MENTORSHIP_XP = 20;
+
     private LocalDate date;
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    @Override
+    public double computeXP() {
+        return XP_DEFAULT + MENTORSHIP_XP;
     }
 
     public LocalDate getDate() {
@@ -33,7 +22,7 @@ public class Mentorship {
 
     @Override
     public String toString() {
-        return "Mentoria [title=" + title + ", description=" + description + ", date=" + date + "]";
+        return "Mentorship [title=" + getTitle() + ", description=" + getDescription() + ", date=" + date + "]";
     }
 
 }

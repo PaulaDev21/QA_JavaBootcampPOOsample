@@ -1,24 +1,12 @@
 package br.com.pauladev.dio.bootcamp.gtf.qa.poobootcamp.domain;
 
-public class Course {
-    private String title;
-    private String description;
+public class Course extends Content {
+
     private int workload;
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    @Override
+    public double computeXP() {
+        return workload * XP_DEFAULT;
     }
 
     public int getWorkload() {
@@ -31,7 +19,7 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Curso [title=" + title + ", description=" + description + ", workload=" + workload + "]";
+        return "Course [title=" + getTitle() + ", description=" + getDescription() + ", workload=" + workload + "]";
     }
 
 }
