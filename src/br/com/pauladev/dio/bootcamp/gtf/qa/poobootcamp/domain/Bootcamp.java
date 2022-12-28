@@ -8,7 +8,7 @@ public class Bootcamp {
     private String name;
     private String description;
 
-    private Set<Dev> inscribedDevs = new LinkedHashSet<>();
+    private Set<Dev> subscribedDevs = new LinkedHashSet<>();
     private Set<Content> contents = new HashSet<>();
 
     public String getName() {
@@ -27,12 +27,12 @@ public class Bootcamp {
         this.description = description;
     }
 
-    public Set<Dev> getInscribedDevs() {
-        return inscribedDevs;
+    public Set<Dev> getSubscribedDevs() {
+        return subscribedDevs;
     }
 
-    public void setInscribedDevs(Set<Dev> inscribedDevs) {
-        this.inscribedDevs = inscribedDevs;
+    public void setSubscribedDevs(Set<Dev> subscribedDevs) {
+        this.subscribedDevs = subscribedDevs;
     }
 
     public Set<Content> getContents() {
@@ -49,7 +49,7 @@ public class Bootcamp {
         int result = 1;
         result = prime * result + ((name == null) ? 0 : name.hashCode());
         result = prime * result + ((description == null) ? 0 : description.hashCode());
-        result = prime * result + ((inscribedDevs == null) ? 0 : inscribedDevs.hashCode());
+        result = prime * result + ((subscribedDevs == null) ? 0 : subscribedDevs.hashCode());
         result = prime * result + ((contents == null) ? 0 : contents.hashCode());
         return result;
     }
@@ -73,10 +73,10 @@ public class Bootcamp {
                 return false;
         } else if (!description.equals(other.description))
             return false;
-        if (inscribedDevs == null) {
-            if (other.inscribedDevs != null)
+        if (subscribedDevs == null) {
+            if (other.subscribedDevs != null)
                 return false;
-        } else if (!inscribedDevs.equals(other.inscribedDevs))
+        } else if (!subscribedDevs.equals(other.subscribedDevs))
             return false;
         if (contents == null) {
             if (other.contents != null)

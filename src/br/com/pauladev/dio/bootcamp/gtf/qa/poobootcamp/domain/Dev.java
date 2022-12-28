@@ -2,11 +2,32 @@ package br.com.pauladev.dio.bootcamp.gtf.qa.poobootcamp.domain;
 
 import java.util.Set;
 import java.util.LinkedHashSet;
+import java.util.Optional;
 
 public class Dev {
     private String name;
     private Set<Content> subscribedContents = new LinkedHashSet<>();
     private Set<Content> concludedContents = new LinkedHashSet<>();
+
+    public void subscribeToBootcamp(Bootcamp bc) {
+        this.getSubscribedContents().addAll(bc.getContents());
+        bc.getSubscribedDevs().add(this);
+    }
+
+    public void progress() {
+        Optional<Content> firstContent = this.getSubscribedContents().stream().findFirst();
+
+        if (firstContent.isPresent()) {
+            this.concludedContents.add(firstContent.get());
+            this.subscribedContents.remove(firstContent.get());
+        } else {
+            System.out.println("You're not subscribed to any content!");
+        }
+    }
+
+    public double computeTotalXp() {
+        return concludedContents.stream().mapToDouble(Content::computeXP).sum();
+    }
 
     public String getName() {
         return name;
