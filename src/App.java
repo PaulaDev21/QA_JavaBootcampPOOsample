@@ -11,6 +11,8 @@ import java.io.FileReader;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+import java.util.Random;
+
 public class App {
 
     private static Set<Content> contents = new HashSet<>();
@@ -21,7 +23,19 @@ public class App {
 
         readTestData("./resources/testdata/bootcamptestdata.txt");
 
-        System.out.println(bootcamp);
+        Random randomGenerator = new Random();
+
+        for (Dev dev : devs) {
+            if (randomGenerator.nextInt() % 2 == 0) {
+                dev.subscribeToBootcamp(bootcamp);
+                System.out.println(dev + " subscribed to Bootcamp " + bootcamp.getName());
+            } else {
+                System.out.println(dev + " NOT subscribed to Bootcamp " + bootcamp.getName());
+            }
+
+            System.out.println(bootcamp);
+
+        }
 
     }
 
