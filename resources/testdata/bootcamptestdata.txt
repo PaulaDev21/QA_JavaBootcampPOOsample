@@ -1,0 +1,30 @@
+devs:
+Alberto Silva
+Luana Souza
+Ricardo A. Braga
+Célia Maria da Conceição e Lima
+
+curso:
+Fundamentos de Qualidade e Desenvolvimento de Software
+Introdução ao mercado de qualidade em software, métodos ágeis e certificação CPFL. 
+15
+curso:
+Princípios de Programação e Testes com Java
+Git e Github, ambientes de desenvolvimento para Java, controle de fluxo e métodos.  
+30
+mentoria:
+Dominando POO com Java
+Diego Renan ensina como implementar os princípios de Programação Orientada a Objetos em Java. 
+16/11/2022
+mentoria:
+Testes de Performance em aplicações web com JMeter. 
+Carolina Louzada dá uma introdução ao uso do JMeter para testar o desempenho de aplicações web.  
+22/11/2022
+curso:
+Explorando os principais tipos de teste na prática
+Fundamentos de automação de testes, testes de API, Selenium e Rest Assured. 
+40
+
+bootcamp:
+GFT Quality Assurance Para Mulheres
+O bootcamp ideal para pessoas que se identificam como mulheres e que estão buscando uma primeira oportunidade no mercado de TI, migração de carreira ou até mesmo júniores em busca de crescimento profissional e uma maior oportunidade na GFT. Com o objetivo de ensinar e graduar até mesmo quem nunca viu nada sobre o assunto, o bootcamp chegou para ser uma excelente porta de entrada para quem deseja aprender de verdade e construir uma carreira na área de Quality Assurance.

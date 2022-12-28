@@ -9,6 +9,10 @@ public class Dev {
     private Set<Content> subscribedContents = new LinkedHashSet<>();
     private Set<Content> concludedContents = new LinkedHashSet<>();
 
+    public Dev(String name) {
+        this.name = name;
+    }
+
     public void subscribeToBootcamp(Bootcamp bc) {
         this.getSubscribedContents().addAll(bc.getContents());
         bc.getSubscribedDevs().add(this);

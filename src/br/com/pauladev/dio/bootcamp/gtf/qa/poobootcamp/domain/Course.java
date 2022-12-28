@@ -4,6 +4,11 @@ public class Course extends Content {
 
     private int workload;
 
+    public Course(String title, String description, int workload) {
+        super(title, description);
+        this.setWorkload(workload);
+    }
+
     @Override
     public double computeXP() {
         return workload * XP_DEFAULT;

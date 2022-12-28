@@ -8,6 +8,11 @@ public abstract class Content {
 
     public abstract double computeXP();
 
+    public Content(String title, String description) {
+        this.setTitle(title);
+        this.setDescription(description);
+    }
+
     public String getTitle() {
         return title;
     }
