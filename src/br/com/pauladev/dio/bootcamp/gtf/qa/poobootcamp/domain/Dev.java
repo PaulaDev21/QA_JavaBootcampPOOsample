@@ -57,7 +57,7 @@ public class Dev {
 
     @Override
     public String toString() {
-        return this.getName();
+        return this.getName() + "[" + computeTotalXp() + "]";
     }
 
 }
