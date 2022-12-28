@@ -36,7 +36,7 @@ public class App {
                 if (randomGenerator.nextInt() % 2 == 0) {
                     subscribed.progress();
                     System.out.println(subscribed + " progressed in Bootcamp " + bootcamp.getName() + "\n["
-                            + subscribed.computeTotalXp() + " experience points.]");
+                            + subscribed.computeTotalXp() + " experience points]");
                 }
             }
         }
