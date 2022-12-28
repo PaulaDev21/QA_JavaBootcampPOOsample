@@ -28,6 +28,13 @@ public class App {
         System.out.println(bootcamp);
 
         testProgression(bootcamp, randomGenerator);
+        testExperiencePointsForAll();
+    }
+
+    private static void testExperiencePointsForAll() {
+        for (Dev dev : devs) {
+            System.out.println(dev);
+        }
     }
 
     private static void testProgression(Bootcamp bootcamp, Random randomGenerator) {

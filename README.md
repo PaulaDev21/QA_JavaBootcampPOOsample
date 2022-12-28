@@ -7,7 +7,7 @@ This is an exercise for the DIO bootcamp on quality assurance. Delivered by Ana 
 * in class Bootcamp -> endDate is not declared as final, since it makes sense that it could be modified, for example, when few people are progressing as expected. 
 * while testing -> reading test data from a UTF-8 file
 * devs randomly subscribed to bootcamp
-* 
+* randomized test to progressing devs
 
 ## Folder Structure
 
